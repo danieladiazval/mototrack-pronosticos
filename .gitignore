@@ -1,0 +1,17 @@
+# Entorno virtual (cada computador crea el suyo con el lanzador)
+.venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Datos de demanda: no se suben al repositorio
+*.xlsx
+~$*.xlsx
+
+# Configuración local de Claude Code
+.claude/
