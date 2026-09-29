@@ -15,3 +15,6 @@ Thumbs.db
 
 # Configuración local de Claude Code
 .claude/
+
+# Costos y precios guardados por la app entre sesiones
+datos_guardados/

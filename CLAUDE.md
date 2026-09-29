@@ -194,3 +194,21 @@ Detalles propios de cada sistema:
   (o al revés), se borra `.venv` y el lanzador la vuelve a crear.
 
 Menciona ambos archivos en el `README.md` como la forma más fácil de abrir la app.
+
+---
+
+## 10. Clasificación ABC-XYZ (segunda entrega)
+
+- **Entradas:** (a) Excel de costos y precios por producto: se guarda en `datos_guardados/`
+  y se reutiliza si no se sube uno nuevo; (b) el Excel de demanda de cada turno.
+- **Ventana móvil** de 52 turnos (un año, editable). La demanda y la utilidad del ABC salen de
+  esa ventana. Por defecto el motor entrena con toda la historia (con solo 52 turnos,
+  HoltWinters con `season_length=13` no alcanza a entrenar en el backtesting); hay una casilla
+  para entrenar solo con la ventana.
+- **SKUs:** 8 (NORTE ×3, CENTRO ×3, SUR ×2). CEDI y MOTOTRAK no se clasifican.
+- **ABC** por utilidad = demanda × (precio − costo). A ≤ 80 %, B ≤ 95 % acumulado (editables).
+- **XYZ** por el **Score%** del mejor modelo (no por coeficiente de variación).
+  X ≤ 25 %, Y ≤ 60 %, Z > 60 % (editables).
+- El **RMSE** por SKU queda visible y en el reporte (se usará para el stock de seguridad).
+- **Consolidado por producto:** suma de las tiendas; Score%/RMSE de la serie `MOTOTRAK|PRODUCTO`.
+- **Salidas:** Pareto, matriz ABC-XYZ, gráfica consolidada y un Excel con todas las tablas.

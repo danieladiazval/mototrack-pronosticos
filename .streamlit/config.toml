@@ -1,0 +1,6 @@
+# Tema de la app: tono blanco (se usa aunque el computador esté en modo oscuro).
+[theme]
+base = "light"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F6F8"
+textColor = "#1F2328"
